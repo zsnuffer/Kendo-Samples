@@ -1,0 +1,31 @@
+div #my-app {
+  display: flex;
+  flex: 1;
+  height: 100%;
+}
+#my-app kendo-gantt {
+  height: 100%;
+}
+.summary-task-content {
+  color: white;
+  font-size: 8px;
+}
+.task-content {
+  overflow: hidden;
+}
+
+.k-task.more-than-half.k-task-milestone,
+.k-task.more-than-half .k-task-summary-complete,
+.k-task.more-than-half.k-task-summary,
+.k-task.more-than-half .k-task-complete,
+.k-task.more-than-half .k-task-template {
+  background-color: forestgreen;
+  color: white;
+}
+.k-task.less-than-half.k-task-summary,
+.k-task.less-than-half .k-task-summary-complete,
+.k-task.less-than-half .k-task-complete,
+.k-task.less-than-half .k-task-template {
+  background-color: crimson;
+  color: white;
+}
