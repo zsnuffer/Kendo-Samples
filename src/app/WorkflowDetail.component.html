@@ -1,0 +1,93 @@
+<div class="spacer"></div>
+<div style="display:flex; flex-direction:column; flex:4; padding: 16px;">
+  <div
+    style=" border: 1px Solid black; border-radius: 8px; display:flex; flex-direction:column; height: 100%;background-color: #d8d8d8;"
+  >
+    <h1
+      style="display:flex; flex-direction: row; padding: 8px;background-image: linear-gradient(to bottom,#f9fafa,#dce0e4);
+    border-bottom: solid gray 1px; border-radius: 8px 8px 0 0;"
+    >
+      Candidate Filings Workflow: Rick Warren, City Council
+    </h1>
+    <div style="display:flex; padding: 6px;">
+      <label style="font-weight: bold; margin: 5px 8px; ">Start Date: </label>
+      <kendo-datepicker
+        style="width:120px"
+        [value]="StartDate"
+      ></kendo-datepicker>
+    </div>
+    <div style="display:flex; padding: 6px;">
+      <label style="font-weight: bold; margin: 5px 10px; ">End Date: </label>
+      <kendo-datepicker
+        style="width:120px"
+        [value]="EndDate"
+      ></kendo-datepicker>
+    </div>
+    <div style="display:flex;height:100%; padding: 8px;">
+      <div style="display:flex; flex-direction:column; height: 100%;flex:1">
+        <kendo-grid
+          style="height:100%"
+          [kendoGridBinding]="gridData"
+          [selectable]="true"
+          kendoGridSelectBy="ID"
+          [selectedKeys]="[5]"
+        >
+          <kendo-grid-column title="Step" field="Step"></kendo-grid-column>
+          <kendo-grid-column
+            title="Status"
+            field="Status"
+            [width]="120"
+          ></kendo-grid-column>
+          <kendo-grid-column
+            title="Due Date"
+            field="DueDate"
+            format="M/d/yyyy"
+            [width]="150"
+          ></kendo-grid-column>
+          <kendo-grid-column
+            title="Completed Date"
+            field="CompletedDate"
+            format="M/d/yyyy"
+            [width]="150"
+          >
+          </kendo-grid-column>
+        </kendo-grid>
+      </div>
+      <div style="display:flex; flex-direction:column; height: 100%;flex:1">
+        <div>
+          <label style="font-weight: bold; margin: 5px 8px; ">Step: </label>
+          <span> Treasurer Form Filed</span>
+        </div>
+        <div>
+          <label style="font-weight: bold; margin: 5px 8px; "
+            >Assigned To:
+          </label>
+          <span> Cindy Clerk</span>
+        </div>
+        <div>
+          <label style="font-weight: bold; margin: 5px 8px; ">Status: </label>
+          <span> Open (4/15, Cindy Clerk)</span>
+        </div>
+        <div>
+          <label style="font-weight: bold; margin: 5px 8px; "
+            >Start Date:
+          </label>
+          <span> 4/1/2022</span>
+        </div>
+        <div>
+          <label style="font-weight: bold; margin: 5px 8px; ">End Date: </label>
+          <span> 4/10/2022</span>
+        </div>
+        <div>
+          <label style="font-weight: bold; margin: 5px 8px; ">Document: </label>
+          <span> Declaration of Treasurer Form</span>
+        </div>
+        <div>
+          <label style="font-weight: bold; margin: 5px 8px; ">Document: </label>
+          <span> Declaration of Treasurer Form</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="spacer"></div>
